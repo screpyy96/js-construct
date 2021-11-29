@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Carbonmade",
+    "description": "Lorem ipsum dolor sit amei dicta! Aliquam aperiam velit",
+    "color": "hsl(0,78%, 62%)",
+    "image": "https://placeholder.pics/svg/50x50/888888/My%20Label"
+  },
+  {
+    "id": 2,
+    "title": "Ceva Text",
+    "description": "Lorem ipsum dolor sit amei dicta! Aliquam aperiam velit",
+    "color": "hsl(180, 62%, 55%)",
+    "image": "https://placeholder.pics/svg/50x50/888888/My%20Label"
+  },
+  {
+    "id": 3,
+    "title": "Mai Mult Text",
+    "description": "Lorem ipsum dolor sit amei dicta! Aliquam aperiam velit",
+    "color": "hsl(34,97%, 64%)",
+    "image": "https://placeholder.pics/svg/50x50/888888/My%20Label"
+  },
+  {
+    "id": 4,
+    "title": "Carbonmade",
+    "description": "Lorem ipsum dolor sit amei dicta! Aliquam aperiam velit",
+    "color": "hsl(212,66%, 64%)",
+    "image": "https://placeholder.pics/svg/50x50/888888/My%20Label"
+  }
+]
