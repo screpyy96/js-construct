@@ -11,7 +11,7 @@ const Hero = () => {
         <HeroWrapper />
         <HeroText>Loyalty. Customer Focus. Exceeding Expectations</HeroText>
         <div>
-          <ContactLink to='/contact'>Contact</ContactLink>
+          <ContactLink to='/contact'>Contact Us</ContactLink>
         </div>
       </HeroFilter>
 

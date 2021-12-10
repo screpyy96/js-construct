@@ -2,9 +2,10 @@ import React from 'react';
 import { Router, Link } from '@reach/router';
 import { StyledMenu } from './menu.styled';
 import Home from '../home/home';
-import About from '../about/about';
+import About from './../about';
 import Contact from '../contact/contact';
-import Services from '../services/services';
+import Projects from '../projects';
+import Bishop from '../pages/Bishop';
 
 const Menu = ({ open, setOpen }) => {
   return (
@@ -12,14 +13,15 @@ const Menu = ({ open, setOpen }) => {
       <StyledMenu open={open} onClick={() => setOpen(false)}>
         <Link to='/'>Home</Link>
         <Link to='/about'>About</Link>
-        <Link to='/services'>Services</Link>
+        <Link to='/projects'>Projects</Link>
         <Link to='/contact'>Contact</Link>
       </StyledMenu>
       <Router>
         <Home path='/' />
         <About path='/about' />
         <Contact path='/contact' />
-        <Services path='/services' />
+        <Projects path='/projects' />
+        <Bishop path='/bishop' />
       </Router>
     </div>
   );

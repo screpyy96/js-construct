@@ -19,6 +19,17 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 1.5rem;
 `;
+export const StyledLinks = styled(Link)`
+  margin: 1rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: block;
+
+  &:hover {
+    display: block;
+  }
+`;
 
 export const ContactLink = styled(Link)`
   position: absolute;
@@ -26,14 +37,14 @@ export const ContactLink = styled(Link)`
   right: 10%;
   color: white;
   text-decoration: none;
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
 `;
 
 export const Logo = styled.div`
   font-size: 1.5rem;
   color: white;
-`;
-export const LinkWrapper = styled.div`
-  //  margin: 0 auto;
 `;
 
 export default StyledLink;

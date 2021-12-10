@@ -4,9 +4,11 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+ 
 }
 
 body {
   font-family: "Poppins", sans-serif;
   background-color: hsl(0, 0%, 98%);
+  height: 100vh;
 }

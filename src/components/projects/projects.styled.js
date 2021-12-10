@@ -17,18 +17,18 @@ export const SubHeader = styled.span`
 export const Paragraph = styled.p`
   color: hsl(299, 6%, 66%);
   font-size: 14px;
-  margin: 30px 0;
+  margin: 10px 0;
 `;
 export const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  width: 250px;
+  height: 150px;
 `;
 
 export const CardWrapper = styled.div`
   background-color: #fff;
   padding: 30px;
   width: 300px;
-  height: 300px;
+  height: 380px;
   margin: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 6px 6px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -59,6 +59,7 @@ export const CardWrapper = styled.div`
   }
 `;
 export const Container = styled.div`
+  padding-top: 10px;
   flex-wrap: wrap;
   display: flex;
   margin: 0 auto;
@@ -73,14 +74,21 @@ export const Container = styled.div`
 `;
 export const Title = styled.h2`
   font-weight: 400;
-  margin-top: 10px;
+  margin: 0;
 `;
-export const ContainerText = styled.h2`
-  font-weight: 400;
-  margin: auto;
-  width: 90%;
-  padding: 10px;
-  @media (max-width: 500px) {
-    font-size: 15px;
-  }
+export const StyledBtn = styled.button`
+  font-weight: 500;
+  width: 100px;
+  height: 30px;
+  color: black;
+  padding-right: 10px;
+  font-size: 14px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: ${({ color }) => color};
+  cursor: pointer;
 `;

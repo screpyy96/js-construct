@@ -1,10 +1,10 @@
 import { Router } from '@reach/router';
 import React from 'react';
 import Home from '../home/home';
-import About from '../about/about';
-import Services from '../services/services';
+import About from '../../components/about';
+import Projects from '../projects/';
 
-import { LinkWrapper, Logo, StyledLink, Wrapper } from './desktop.styled';
+import { Logo, StyledLink, Wrapper } from './desktop.styled';
 import Contact from '../contact/contact';
 
 const DesktopNav = () => {
@@ -12,18 +12,18 @@ const DesktopNav = () => {
     <div>
       <Wrapper>
         <Logo>J.S Construct LTD</Logo>
-        <LinkWrapper>
+        <div>
           <StyledLink to='/'>Home</StyledLink>
           <StyledLink to='/about'>About</StyledLink>
-          <StyledLink to='/services'>Services</StyledLink>
+          <StyledLink to='/projects'>Projects</StyledLink>
           <StyledLink to='/contact'>Contact</StyledLink>
-        </LinkWrapper>
+        </div>
       </Wrapper>
       <Router>
         <Home path='/' />
         <About path='/about' />
         <Contact path='/contact' />
-        <Services path='/services' />
+        <Projects path='/projects' />
       </Router>
     </div>
   );

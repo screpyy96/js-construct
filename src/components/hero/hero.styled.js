@@ -24,9 +24,14 @@ export const HeroWrapper = styled.div`
 
 export const HeroText = styled.div`
   position: absolute;
-  top: 40%;
-  right: 50%;
+  top: 20%;
+  left: 20%;
   color: white;
+  @media (max-width: 500px) {
+    font-size: 20px;
+    top: 35%;
+    left: 18%;
+  }
 `;
 
 export const HeroFilter = styled.h1`

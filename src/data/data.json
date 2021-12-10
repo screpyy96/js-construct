@@ -1,30 +1,24 @@
 [
   {
     "id": 1,
-    "title": "Carbonmade",
-    "description": "Lorem ipsum dolor sit amei dicta! Aliquam aperiam velit",
-    "color": "hsl(0,78%, 62%)",
-    "image": "https://placeholder.pics/svg/50x50/888888/My%20Label"
+    "title": "Exceeding Expectations",
+    "description": "Here is a powerful yet simple rule. Always give people more than they expect to get. – Nelson Boswell"
   },
   {
     "id": 2,
-    "title": "Ceva Text",
-    "description": "Lorem ipsum dolor sit amei dicta! Aliquam aperiam velit",
-    "color": "hsl(180, 62%, 55%)",
-    "image": "https://placeholder.pics/svg/50x50/888888/My%20Label"
+    "title": "Customer Focus",
+    "description": "We have entered the era of the customer. Today, providing customers with outstanding customer service is essential to building loyal customers and a long-lasting brand. – Jerry Gregoire"
   },
   {
     "id": 3,
-    "title": "Mai Mult Text",
-    "description": "Lorem ipsum dolor sit amei dicta! Aliquam aperiam velit",
-    "color": "hsl(34,97%, 64%)",
-    "image": "https://placeholder.pics/svg/50x50/888888/My%20Label"
+    "title": "Loyalty",
+    "description": "You never get a second chance to make a first impression. – Will Rogers"
   },
   {
     "id": 4,
-    "title": "Carbonmade",
-    "description": "Lorem ipsum dolor sit amei dicta! Aliquam aperiam velit",
-    "color": "hsl(212,66%, 64%)",
-    "image": "https://placeholder.pics/svg/50x50/888888/My%20Label"
+    "description1": "From its foundation in 2019, J.C. Construct LTD has been working in various projects of mechanical work. Our company does ductwork project delivering the best quality and our workers are fully qualified to deliver the work at the best standards.",
+    "description2": "Our philosophy has always been always orientated to commitment, dedication and loyalty towards work – Commitment will bring in dedication, hard work and best results.  With our best skills, experience and effort for the optimal productivity we try and succeed on delivering the final product in the time frame and with no issues to our clients.",
+    "description3": "We have the capabilities to provide services ranging from full airside turnkey installations, to more traditional sub-contract ductwork Install only packages. We have a wealth of experience working throughout the sectors providing shell and core, to fit-out installation within the commercial and residential.",
+    "description4": "J.C. Construct is orientated towards respecting all Health and Safety Regulations"
   }
 ]
