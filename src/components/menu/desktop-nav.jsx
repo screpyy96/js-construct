@@ -5,7 +5,7 @@ import About from '../../components/about';
 import Projects from '../projects/';
 
 import { Logo, StyledLink, Wrapper } from './desktop.styled';
-import Contact from '../contact/contact';
+import Contact from '../contact';
 
 const DesktopNav = () => {
   return (

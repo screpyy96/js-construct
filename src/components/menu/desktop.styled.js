@@ -37,6 +37,9 @@ export const ContactLink = styled(Link)`
   right: 10%;
   color: white;
   text-decoration: none;
+  border: 2px solid white;
+  border-radius: 6px;
+  padding: 4px 8px;
   @media (max-width: 500px) {
     font-size: 20px;
   }

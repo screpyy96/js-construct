@@ -3,9 +3,8 @@ import { Router, Link } from '@reach/router';
 import { StyledMenu } from './menu.styled';
 import Home from '../home/home';
 import About from './../about';
-import Contact from '../contact/contact';
+import Contact from '../contact';
 import Projects from '../projects';
-import Bishop from '../pages/Bishop';
 
 const Menu = ({ open, setOpen }) => {
   return (
@@ -21,7 +20,6 @@ const Menu = ({ open, setOpen }) => {
         <About path='/about' />
         <Contact path='/contact' />
         <Projects path='/projects' />
-        <Bishop path='/bishop' />
       </Router>
     </div>
   );

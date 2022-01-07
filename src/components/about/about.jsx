@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import info from '../../data/data.json';
-import { Styledtext } from './about';
+import { StyledBox, StyledContainer, StyledImage, Styledtext } from './about';
 
 const About = () => {
   const [data, setData] = useState([]);
@@ -10,16 +10,19 @@ const About = () => {
     setData(info);
   }, [data]);
   return (
-    <div>
-      {data.map((item) => (
-        <div key={item.id}>
-          <Styledtext>{item.description1}</Styledtext>
-          <Styledtext>{item.description2}</Styledtext>
-          <Styledtext>{item.description3}</Styledtext>
-          <Styledtext>{item.description4}</Styledtext>
-        </div>
-      ))}
-    </div>
+    <StyledContainer>
+      <StyledBox>
+        {data.map((item) => (
+          <div style={{ padding: 0 }} key={item.id}>
+            <Styledtext>{item.description1}</Styledtext>
+            <Styledtext>{item.description2}</Styledtext>
+            <Styledtext>{item.description3}</Styledtext>
+            <Styledtext>{item.description4}</Styledtext>
+          </div>
+        ))}
+      </StyledBox>
+      <StyledImage></StyledImage>
+    </StyledContainer>
   );
 };
 

@@ -5,17 +5,17 @@ import {
   Image,
   Paragraph,
   StyledBtn,
+  StyledLink,
   Title,
 } from './projects.styled';
 import info from '../../data/projects.json';
-import { Link, Router } from '@reach/router';
-import Bishop from '../pages/Bishop';
 
 const Projects = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
     setData(info);
   }, [data]);
+
   return (
     <div>
       <Container>
@@ -25,13 +25,10 @@ const Projects = () => {
             <Paragraph>{item.PDescription}</Paragraph>
             <Image src={item.image} />
             <StyledBtn color={item.color}>
-              <Link to={`${item.link}`}>View Project</Link>
+              <StyledLink to={`${item.link}`}>View Project</StyledLink>
             </StyledBtn>
           </CardWrapper>
         ))}
-        <Router>
-          <Bishop path='/bishop' />
-        </Router>
       </Container>
     </div>
   );
