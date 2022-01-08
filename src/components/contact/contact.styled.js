@@ -10,7 +10,7 @@ export const ContactWrapper = styled.div`
   /* background-color: #f5f5f5; */
   padding: 0px;
   margin: 0px;
-  min-height: 87.5vh;
+  min-height: 89vh;
 `;
 
 export const SendBtn = styled.div`
