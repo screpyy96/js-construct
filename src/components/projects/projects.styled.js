@@ -35,6 +35,7 @@ export const CardWrapper = styled.div`
   position: relative;
   overflow: hidden;
   border-radius: 10px 10px;
+
   &:first-child {
     transform: translateY(50%);
   }
@@ -65,6 +66,7 @@ export const Container = styled.div`
   display: flex;
   margin: 30px auto;
   max-width: 1200px;
+  min-height: 82vh;
   justify-content: center;
   @media (min-width: 800px) {
     max-width: 1200px;
