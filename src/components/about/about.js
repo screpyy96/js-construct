@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Styledtext = styled.div`
   font-size: 1.3rem;
-  font-weight: bold;
   /* color: #fff; */
   text-align: center;
   margin-top: 2rem;
