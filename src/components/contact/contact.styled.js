@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import styled from 'styled-components';
 
 export const ContactWrapper = styled.div`
@@ -16,10 +17,16 @@ export const ContactWrapper = styled.div`
 export const SendBtn = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 `;
 
 export const ErrorStyle = styled.div`
   color: red;
+`;
+export const BtnMui = styled(Button)`
+  && {
+    background-color: hsl(234, 12%, 34%);
+  }
 `;
 
 export const StyledBox = styled.div`

@@ -41,7 +41,7 @@ export const ContactLink = styled(Link)`
   border-radius: 6px;
   padding: 4px 8px;
   @media (max-width: 500px) {
-    font-size: 20px;
+    font-size: 15px;
   }
 `;
 

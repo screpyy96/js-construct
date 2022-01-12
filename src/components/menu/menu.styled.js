@@ -20,6 +20,7 @@ export const StyledMenu = styled.nav`
     font-size: 1.5rem;
     text-align: center;
     position: fixed;
+    z-index: 2;
   }
   @media (min-width: 800px) {
     display: none;
