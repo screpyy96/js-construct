@@ -2,145 +2,143 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import * as Yup from 'yup';
 
-import { ContactWrapper, SendBtn, StyledBox } from './contact.styled';
+import {
+  ContactWrapper,
+  // ErrorStyle,
+  // SendBtn,
+  StyledBox,
+} from './contact.styled';
 import { Form, Formik } from 'formik';
 import { Typography } from '@material-ui/core';
 import { TextField } from '@mui/material';
-import SendIcon from '@mui/icons-material/Send';
-import LoadingButton from '@mui/lab/LoadingButton';
 
 const Contact = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const handleClick = () => {
-    setIsLoading(true);
-  };
-
-  const [str, setStr] = useState('');
+  const [from_name, setFrom_name] = useState('');
+  const [from_email, setFrom_email] = useState('');
+  const [telephone, setTelephone] = useState('');
+  const [message, setMessage] = useState('');
   const form = useRef();
 
-  const sendEmail = (e) => {
-    emailjs
-      .sendForm(
-        'service_ys07ooc',
-        'template_y6qkepf',
-        form.current,
-        'user_Zdj4p9NrBtz9chD2ILe0c',
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          alert('sent');
-          setStr(e.from_email);
-          setStr('');
-        },
-        (error) => {
-          console.log(error.text);
-        },
-      );
-  };
-  console.log(str);
-  const contactSchema = Yup.object().shape({
-    from_name: Yup.string().required('required').min(2),
-    from_email: Yup.string().email('Invalid email').required('required'),
-    message: Yup.string().required('required').min(2),
-    telephone: Yup.number().required('required').min(10),
-  });
-
-  const initialFormValues = {
-    from_name: '',
-    from_email: '',
-    message: '',
-    telephone: '',
+  const handleSubmit = (e) => {
+    // eslint-disable-next-line
+    const templateParams = {
+      from_name,
+      from_email,
+      telephone,
+      message,
+    };
+    emailjs.sendForm(
+      'service_ys07ooc',
+      'template_y6qkepf',
+      form.current,
+      'user_Zdj4p9NrBtz9chD2ILe0c',
+    );
+    setFrom_name('');
+    setFrom_email('');
+    setTelephone('');
+    setMessage('');
   };
 
   return (
     <ContactWrapper>
-      <Typography variant='h4' align='center'>
-        Contact Us
-      </Typography>
-      <Formik
-        initialValues={initialFormValues}
-        validationSchema={contactSchema}
-        onSubmit={sendEmail}
-        enableReinitialize
-      >
-        {({ values, errors, touched, handleChange, handleBlur }) => (
-          <Form ref={form}>
-            <StyledBox>
+      <StyledBox>
+        <Typography variant='h4' component='h2'>
+          Contact
+        </Typography>
+
+        <Formik
+          initialValues={{
+            from_name: '',
+            from_email: '',
+            telephone: '',
+            message: '',
+          }}
+          validationSchema={Yup.object({
+            from_name: Yup.string()
+              .max(15, 'Must be 15 characters or less')
+              .required('Required'),
+            from_email: Yup.string()
+              .email('Invalid email address')
+              .required('Required'),
+            telephone: Yup.string()
+              .max(15, 'Must be 15 characters or less')
+              .required('Required'),
+
+            message: Yup.string()
+              .max(500, 'Must be 500 characters or less')
+              .required('Required'),
+          })}
+          onSubmit={(values, { setSubmitting }) => {
+            setTimeout(() => {
+              handleSubmit(values);
+              form.current.reset();
+              setSubmitting(false);
+            }, 400);
+          }}
+        >
+          {({
+            values,
+            errors,
+            touched,
+            handleChange,
+            handleBlur,
+            // handleSubmit,
+            isSubmitting,
+          }) => (
+            <Form ref={form}>
               <TextField
-                // helperText='Please enter your name'
                 label='Name'
-                type='text'
                 name='from_name'
-                id='from_name'
-                onChange={handleChange}
-                onBlur={handleBlur}
                 value={values.from_name}
+                onChange={handleChange} // eslint-disable-line}
+                onBlur={handleBlur}
+                helperText={touched.from_name ? errors.from_name : ''}
+                error={touched.from_name && Boolean(errors.from_name)}
+                variant='outlined'
+                fullWidth
               />
-              {errors.from_name && touched.from_name && (
-                <div className='error'>{errors.from_name}</div>
-              )}
-            </StyledBox>
-            <StyledBox>
               <TextField
-                // helperText='Please enter your email'
                 label='Email'
-                type='email'
                 name='from_email'
-                id='from_email'
-                onChange={handleChange}
-                onBlur={handleBlur}
                 value={values.from_email}
-              />
-              {errors.from_email && touched.from_email && (
-                <div className='error'>{errors.from_email}</div>
-              )}
-            </StyledBox>
-            <StyledBox>
-              <TextField
-                // helperText='Please enter your phone number'
-                label='Telephone'
-                type='text'
-                name='telephone'
-                id='telephone'
                 onChange={handleChange}
                 onBlur={handleBlur}
-                value={values.telephone}
+                helperText={touched.from_email ? errors.from_email : ''}
+                error={touched.from_email && Boolean(errors.from_email)}
+                variant='outlined'
+                fullWidth
               />
-              {errors.telephone && touched.telephone && (
-                <div className='error'>{errors.telephone}</div>
-              )}
-            </StyledBox>
-            <StyledBox>
               <TextField
-                // helperText='Please enter your message'
+                label='Telephone'
+                name='telephone'
+                value={values.telephone}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                helperText={touched.telephone ? errors.telephone : ''}
+                error={touched.telephone && Boolean(errors.telephone)}
+                variant='outlined'
+                fullWidth
+              />
+              <TextField
                 label='Message'
                 name='message'
-                id='message'
+                value={values.message}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                value={values.message}
-                size='big'
+                helperText={touched.message ? errors.message : ''}
+                error={touched.message && Boolean(errors.message)}
+                variant='outlined'
+                fullWidth
+                multiline
+                rows={4}
               />
-              {errors.message && touched.message && (
-                <div className='error'>{errors.message}</div>
-              )}
-            </StyledBox>
-            <SendBtn>
-              <LoadingButton
-                type='submit'
-                onClick={handleClick}
-                loading={isLoading}
-                endIcon={<SendIcon />}
-                loadingPosition='end'
-                variant='contained'
-              >
+              <button type='submit' disabled={isSubmitting}>
                 Send
-              </LoadingButton>
-            </SendBtn>
-          </Form>
-        )}
-      </Formik>
+              </button>
+            </Form>
+          )}
+        </Formik>
+      </StyledBox>
     </ContactWrapper>
   );
 };
