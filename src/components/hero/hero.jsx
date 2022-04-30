@@ -6,7 +6,7 @@ import Contact from '../contact/';
 
 const Hero = () => {
   return (
-    <>
+    <div>
       <HeroFilter>
         <HeroWrapper />
         <HeroText>Loyalty. Customer Focus. Exceeding Expectations</HeroText>
@@ -18,7 +18,7 @@ const Hero = () => {
       <Router>
         <Contact path='/contact' />
       </Router>
-    </>
+    </div>
   );
 };
 

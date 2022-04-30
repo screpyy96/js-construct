@@ -9,7 +9,7 @@ import HidePark from '../pages/hide-park';
 
 const App = () => {
   return (
-    <div style={{ position: 'relative' }}>
+    <div>
       <Navbar />
       <Router>
         <Bishop path='/one-bishopgate-liverpool-street' />

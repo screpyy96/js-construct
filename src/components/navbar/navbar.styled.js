@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import burgerImg from "../../assets/hamburger.jpg";
+import styled from 'styled-components';
+import burgerImg from '../../assets/hamburger.jpg';
 
 export const BurgerClose = styled.div`
   width: 50px;
@@ -9,7 +9,7 @@ export const BurgerClose = styled.div`
   position: relative;
   bottom: 285px;
   left: 200px;
-  font-size: 30px
+  font-size: 30px;
 `;
 export const BurgerOpen = styled.img.attrs({
   src: `${burgerImg}`,
@@ -17,11 +17,10 @@ export const BurgerOpen = styled.img.attrs({
   width: 50px;
   height: 50px;
   margin: 10px;
-
 `;
 
 export const MenuWrapper = styled.div`
-  visibility: ${({ burger }) => (burger ? "visible" : "hidden")}}};
+  visibility: ${({ burger }) => (burger ? 'visible' : 'hidden')}}};
   background-color: red;
   width: 100vw;
   height: 100vh;

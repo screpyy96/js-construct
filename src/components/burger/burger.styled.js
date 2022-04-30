@@ -4,30 +4,28 @@ export const BurgerWrapper = styled.div`
   display: flex;
   position: sticky;
   justify-content: flex-end;
-  /* top: 2rem; */
+  top: 2rem;
   top: 3rem;
   right: 0;
-  margin-right: 30px;
+  /* margin-right: 30px; */
   z-index: 2;
-  /* background: red; */
+  background: transparent;
   width: 100%;
 `;
 
-export const StyledBurger = styled.button`
-  position: absolute;
+export const StyledBurger = styled.div`
+  /* position: absolute; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 2rem;
   height: 2rem;
-  background: transparent;
   border: none;
-  cursor: pointer;
-  padding: 0;
-  z-index: 10 !important;
   position: sticky;
+  top: 0;
+  right: 30px;
 
-  &:focus {
+  &: focus {
     outline: none;
   }
 
@@ -35,12 +33,12 @@ export const StyledBurger = styled.button`
     width: 2rem;
     height: 0.25rem;
     background: ${({ open }) =>
-      open ? 'hsla(54, 100%, 57%, 1)' : 'hsla(54, 100%, 57%, 1)'};
+      open ? 'hsla(24, 100%, 57%, 1)' : 'hsla(66, 100%, 57%, 1)'};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
     top: 0;
-    right: 2rem;
+    right: 0;
     transform-origin: 1px;
 
     :first-child {
